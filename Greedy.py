@@ -15,6 +15,10 @@ for cache in range(data.nCaches):
             videoSize = data.videoSizes[video]
             if videoSize + filled > data.cacheCapacity:
                 continue
+            
+            if cache in cacheContents and video in cacheContents[cache]:
+                    continue
+                
             improvement = 0
             for endpoint in data.endpoints:
                 try:
