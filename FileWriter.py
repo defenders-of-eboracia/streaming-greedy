@@ -10,5 +10,6 @@ class FileWriter(object):
 		file = open(self.filename, "w+")
 		file.write("%d\n" % (len(outputData)))
 		for cID, vidList in outputData.items():
-			file.write("%d %s" % (cID, " ".join(vidList)))
+			print(cID)
+			file.write("%d %s\n" % (cID, " ".join("%d" % (x) for x in vidList)))
 		file.close()
