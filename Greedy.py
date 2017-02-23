@@ -12,6 +12,7 @@ videosCached = {}
 cacheContents = {}
 
 for cache in range(data.nCaches):
+    print("Cache", cache, "out of", data.nCaches)
     filled = 0
     while True:
         bestVideo, score = None, 0
