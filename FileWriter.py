@@ -6,7 +6,7 @@ class FileWriter(object):
 	"""write outputData to file, outputData is a dict where the
 		cache ID is the key and the values are lists of video IDs
 	"""
-	def writeData(self, outputData)
+	def writeData(self, outputData):
 		file = open(self.filename, "w+")
 		file.write("%d\n" % (len(outputData)))
 		for cID, vidList in outputData.items():

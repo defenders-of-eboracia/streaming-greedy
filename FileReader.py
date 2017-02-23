@@ -29,8 +29,8 @@ class FileReader(object):
 
 	def parseFile(self):
 		firstLine = self.file.readline()
-		(self.nVideos, self.nEndoints, self.nReqDescs, self.nCaches, self.cacheCapacty) = [int(x) for x in firstLine.split(" ")]
-		print("Videos: %d, Endpoints: %d, Request Descriptions: %d, Caches: %d, Cache Capacity: %d" % (self.nVideos, self.nEndoints, self.nReqDescs, self.nCaches, self.cacheCapacty))
+		(self.nVideos, self.nEndoints, self.nReqDescs, self.nCaches, self.cacheCapacity) = [int(x) for x in firstLine.split(" ")]
+		print("Videos: %d, Endpoints: %d, Request Descriptions: %d, Caches: %d, Cache Capacity: %d" % (self.nVideos, self.nEndoints, self.nReqDescs, self.nCaches, self.cacheCapacity))
 		self.videoSizes = [int(x) for x in self.file.readline().split(" ")]
 		# Parse endpoints
 		self.endpoints = []
