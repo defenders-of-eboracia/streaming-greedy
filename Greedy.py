@@ -41,9 +41,10 @@ for cache in range(data.nCaches):
 
         if cache in cacheContents:
             cacheContents[cache].append(bestVideo)
-            filled += data.videoSizes[bestVideo]
         else:
             cacheContents[cache] = [bestVideo]
+        filled += data.videoSizes[bestVideo]
 
+            
 writer = FileWriter("example.out")
 writer.writeData(cacheContents)
