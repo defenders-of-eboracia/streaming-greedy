@@ -1,7 +1,11 @@
+import sys
+
 from FileReader import FileReader
 from FileWriter import FileWriter
 
-data = FileReader("trivialExample.in")
+file = sys.argv[1]
+
+data = FileReader(file)
 
 videosCached = {}
 
@@ -29,7 +33,6 @@ for cache in range(data.nCaches):
                 except KeyError:
                     continue
 
-            print(improvement)
             if improvement > score:
                 bestVideo, score = video, improvement
 
